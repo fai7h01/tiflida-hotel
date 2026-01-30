@@ -6,31 +6,31 @@ function Home() {
   
   const hotelSections = [
     {
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop',
-      alt: 'Hotel exterior',
-      title: t('homeArchitecture'),
-      text: t('homeArchitectureText'),
+      image: '/reception.jpg',
+      alt: 'Hotel reception',
+      title: t('homeReception'),
+      text: t('homeReceptionText'),
       reverse: false
     },
     {
-      image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=600&fit=crop',
+      image: '/lobby.jpg',
       alt: 'Luxury hotel lobby',
       title: t('homeLobby'),
       text: t('homeLobbyText'),
       reverse: true
     },
     {
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
+      image: '/dining2.jpg',
       alt: 'Hotel restaurant',
       title: t('homeDining'),
       text: t('homeDiningText'),
       reverse: false
     },
     {
-      image: 'https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&h=600&fit=crop',
-      alt: 'Hotel pool',
-      title: t('homeRecreation'),
-      text: t('homeRecreationText'),
+      image: '/cozy.jpg',
+      alt: 'Cozy place for guests',
+      title: t('homeCozy'),
+      text: t('homeCozyText'),
       reverse: true
     }
   ];
