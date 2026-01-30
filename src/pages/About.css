@@ -1,0 +1,95 @@
+.about {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.about-content {
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.about-content .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-section {
+  margin-bottom: 4rem;
+}
+
+.about-section h2 {
+  color: #1a1a1a;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #d4af37;
+  padding-bottom: 0.5rem;
+}
+
+.about-section p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-item {
+  background: #f8f8f8;
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 4px solid #d4af37;
+}
+
+.value-item h3 {
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.value-item p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 3rem 1rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    padding: 3rem 1rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

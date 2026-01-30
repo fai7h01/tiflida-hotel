@@ -1,0 +1,150 @@
+.booking {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.booking-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.booking-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.booking-hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.booking-content {
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.booking-content .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.booking-form-container {
+  background: white;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form-container h2 {
+  color: #1a1a1a;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #1a1a1a;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+}
+
+.booking-submit-button {
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.booking-submit-button:hover {
+  background-color: #d4af37;
+  transform: translateY(-2px);
+}
+
+.booking-info {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f0f0f0;
+  text-align: center;
+}
+
+.booking-info h3 {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.booking-info p {
+  color: #666;
+  line-height: 1.8;
+  margin: 0.5rem 0;
+}
+
+.booking-info strong {
+  color: #1a1a1a;
+}
+
+@media (max-width: 768px) {
+  .booking-hero {
+    padding: 3rem 1rem;
+  }
+
+  .booking-hero h1 {
+    font-size: 2rem;
+  }
+
+  .booking-content {
+    padding: 2rem 1rem;
+  }
+
+  .booking-form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
