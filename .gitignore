@@ -27,3 +27,6 @@ dist-ssr
 .env
 .env.local
 .env.production
+
+# Source photos folder (only public images are needed)
+Tiflida Photos/
