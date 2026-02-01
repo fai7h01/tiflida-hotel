@@ -39,6 +39,8 @@ function ImageGallery({ images, columns = 3 }) {
               src={image.url}
               alt={image.alt || `Gallery image ${index + 1}`}
               className="gallery-image"
+              loading="lazy"
+              decoding="async"
             />
             {image.caption && (
               <div className="gallery-caption">{image.caption}</div>
@@ -58,6 +60,8 @@ function ImageGallery({ images, columns = 3 }) {
               src={images[selectedImage].url}
               alt={images[selectedImage].alt || `Image ${selectedImage + 1}`}
               className="modal-image"
+              loading="eager"
+              decoding="async"
             />
             <button className="modal-nav modal-nav-next" onClick={goToNext}>
               ›

@@ -54,7 +54,12 @@ function Home() {
             <div className="container">
               <div className="image-text-content">
                 <div className="image-text-image">
-                  <img src={section.image} alt={section.alt} />
+                  <img 
+                    src={section.image} 
+                    alt={section.alt} 
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div className="image-text-text">
                   <h2>{section.title}</h2>

@@ -323,6 +323,8 @@ function Rooms() {
                       src={room.images[0].url} 
                       alt={room.name}
                       className="room-card-image"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 )}

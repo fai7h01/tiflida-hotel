@@ -14,6 +14,15 @@ function Carousel({ images, autoPlay = true, interval = 5000 }) {
     return () => clearInterval(timer);
   }, [autoPlay, interval, images.length]);
 
+  // Preload next image for smoother transitions
+  useEffect(() => {
+    if (images.length > 1) {
+      const nextIndex = (currentIndex + 1) % images.length;
+      const img = new Image();
+      img.src = images[nextIndex].url;
+    }
+  }, [currentIndex, images]);
+
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
@@ -46,6 +55,8 @@ function Carousel({ images, autoPlay = true, interval = 5000 }) {
             src={images[currentIndex].url} 
             alt={images[currentIndex].alt || `Slide ${currentIndex + 1}`}
             className="carousel-image"
+            loading="eager"
+            decoding="async"
           />
           {images[currentIndex].caption && (
             <div className="carousel-caption">
