@@ -22,11 +22,6 @@ function Rooms() {
           caption: 'Double Room - Interior'
         },
         {
-          url: '/rooms/double/ALXR_7789-123.png',
-          alt: 'Double Room',
-          caption: 'Double Room - Details'
-        },
-        {
           url: '/rooms/double/ALXR_7789-180.png',
           alt: 'Double Room',
           caption: 'Double Room - Additional view'
@@ -262,7 +257,7 @@ function Rooms() {
   ];
 
   // Combine all images for gallery
-  const allGalleryImages = [
+  const allGalleryImagesRaw = [
     ...allRoomImages, 
     ...nightFamilyImages, 
     ...nightDoubleImages,
@@ -272,6 +267,31 @@ function Rooms() {
     ...nightHallImages,
     ...nightLobbyImages
   ];
+
+  // Remove duplicates based on URL and filename (case-insensitive)
+  const seenUrls = new Set();
+  const seenFilenames = new Set();
+  const allGalleryImages = allGalleryImagesRaw.filter((img) => {
+    // Normalize URL to lowercase for case-insensitive comparison
+    const normalizedUrl = img.url.toLowerCase().replace(/\/+/g, '/');
+    
+    // Extract filename from URL
+    const filename = normalizedUrl.split('/').pop().toLowerCase();
+    
+    // Check if we've seen this exact URL before
+    if (seenUrls.has(normalizedUrl)) {
+      return false; // Duplicate URL, skip it
+    }
+    
+    // Check if we've seen this filename before (same image in different folder)
+    if (seenFilenames.has(filename)) {
+      return false; // Duplicate filename, skip it (same image in different location)
+    }
+    
+    seenUrls.add(normalizedUrl);
+    seenFilenames.add(filename);
+    return true; // First occurrence, keep it
+  });
 
   return (
     <div className="rooms">
