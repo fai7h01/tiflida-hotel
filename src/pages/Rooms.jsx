@@ -9,7 +9,9 @@ function Rooms() {
     {
       name: t('roomsDouble'),
       description: t('roomsDoubleDesc'),
-      features: t('roomsFeatures.double', { returnObjects: true }) || ['Double bed', 'City view', 'Free WiFi', 'Mini bar', 'Work desk', 'Private bathroom'],
+      features: Array.isArray(t('roomsFeatures.double', { returnObjects: true })) 
+        ? t('roomsFeatures.double', { returnObjects: true })
+        : ['Double bed', 'City view', 'Free WiFi', 'Mini bar', 'Work desk', 'Private bathroom'],
       images: [
         {
           url: '/rooms/double/main.png',
@@ -31,7 +33,9 @@ function Rooms() {
     {
       name: t('roomsTwin'),
       description: t('roomsTwinDesc'),
-      features: t('roomsFeatures.twin', { returnObjects: true }) || ['Two single beds', 'City view', 'Free WiFi', 'Mini bar', 'Work desk', 'Private bathroom'],
+      features: Array.isArray(t('roomsFeatures.twin', { returnObjects: true })) 
+        ? t('roomsFeatures.twin', { returnObjects: true })
+        : ['Two single beds', 'City view', 'Free WiFi', 'Mini bar', 'Work desk', 'Private bathroom'],
       images: [
         {
           url: '/rooms/twin/main.jpg',
@@ -58,7 +62,9 @@ function Rooms() {
     {
       name: t('roomsFamily'),
       description: t('roomsFamilyDesc'),
-      features: t('roomsFeatures.family', { returnObjects: true }) || ['Multiple beds', 'Family area', 'Extra space', 'Kids amenities', 'Free WiFi', 'Private bathroom'],
+      features: Array.isArray(t('roomsFeatures.family', { returnObjects: true })) 
+        ? t('roomsFeatures.family', { returnObjects: true })
+        : ['Multiple beds', 'Family area', 'Extra space', 'Kids amenities', 'Free WiFi', 'Private bathroom'],
       images: [
         {
           url: '/rooms/family/main.jpg',
@@ -99,12 +105,17 @@ function Rooms() {
     }
   ];
 
-  // Day photos from rooms
+  // Day photos from rooms (excluding main images as they're already shown on room cards)
   const allRoomImages = rooms.flatMap((room, roomIndex) =>
-    room.images.map((img, imgIndex) => ({
-      ...img,
-      caption: room.name
-    }))
+    room.images
+      .filter((img) => {
+        const filename = img.url.split('/').pop().toLowerCase();
+        return !filename.startsWith('main.');
+      })
+      .map((img, imgIndex) => ({
+        ...img,
+        caption: room.name
+      }))
   );
 
   // Night photos - Family room (room1)
