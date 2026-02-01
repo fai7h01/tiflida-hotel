@@ -228,7 +228,7 @@ const translations = {
     contactSubject: 'თემა',
     contactMessageField: 'შეტყობინება',
     contactSend: 'გაგზავნა',
-    contactFindUs: 'იპოვეთ ჩვენ',
+    contactFindUs: 'გვიპოვეთ ჩვენ',
     contactFindUsDesc: 'ეწვიეთ ჩვენს პრივილეგირებულ მდებარეობას ქალაქის გულში',
     contactViewOnMaps: 'ნახეთ Google Maps-ზე',
     
