@@ -8,6 +8,7 @@ import Rooms from './pages/Rooms';
 import Contact from './pages/Contact';
 import './App.css';
 
+// App component
 function App() {
   return (
     <LanguageProvider>
