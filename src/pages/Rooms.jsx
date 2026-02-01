@@ -325,6 +325,11 @@ function Rooms() {
                       className="room-card-image"
                       loading="lazy"
                       decoding="async"
+                      fetchPriority="low"
+                      onLoad={(e) => {
+                        e.target.style.opacity = '1';
+                      }}
+                      style={{ opacity: 0, transition: 'opacity 0.3s ease-in-out' }}
                     />
                   </div>
                 )}

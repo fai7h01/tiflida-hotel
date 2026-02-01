@@ -41,6 +41,11 @@ function ImageGallery({ images, columns = 3 }) {
               className="gallery-image"
               loading="lazy"
               decoding="async"
+              fetchPriority={index < 6 ? "high" : "low"}
+              onLoad={(e) => {
+                e.target.style.opacity = '1';
+              }}
+              style={{ opacity: 0, transition: 'opacity 0.3s ease-in-out' }}
             />
             {image.caption && (
               <div className="gallery-caption">{image.caption}</div>
@@ -62,6 +67,11 @@ function ImageGallery({ images, columns = 3 }) {
               className="modal-image"
               loading="eager"
               decoding="async"
+              fetchPriority="high"
+              onLoad={(e) => {
+                e.target.style.opacity = '1';
+              }}
+              style={{ opacity: 0, transition: 'opacity 0.3s ease-in-out' }}
             />
             <button className="modal-nav modal-nav-next" onClick={goToNext}>
               ›
