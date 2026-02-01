@@ -117,57 +117,57 @@ function Rooms() {
     {
       url: '/rooms/night/room1/family.JPG',
       alt: 'Family Room - Night',
-      caption: `${t('roomsFamily')} - Night view`
+      caption: `${t('roomsFamily')} - Night`
     },
     {
       url: '/rooms/night/room1/0V0A7595.JPG',
       alt: 'Family Room - Night',
-      caption: `${t('roomsFamily')} - Night interior 1`
+      caption: `${t('roomsFamily')} - Night`
     },
     {
       url: '/rooms/night/room1/0V0A7598.JPG',
       alt: 'Family Room - Night',
-      caption: `${t('roomsFamily')} - Night interior 2`
+      caption: `${t('roomsFamily')} - Night`
     },
     {
       url: '/rooms/night/room1/0V0A7603.JPG',
       alt: 'Family Room - Night',
-      caption: `${t('roomsFamily')} - Night interior 3`
+      caption: `${t('roomsFamily')} - Night`
     },
     {
       url: '/rooms/night/room1/0V0A7607.JPG',
       alt: 'Family Room - Night',
-      caption: `${t('roomsFamily')} - Night interior 4`
+      caption: `${t('roomsFamily')} - Night`
     },
     {
       url: '/rooms/night/room1/0V0A7608.JPG',
       alt: 'Family Room - Night',
-      caption: `${t('roomsFamily')} - Night interior 5`
+      caption: `${t('roomsFamily')} - Night`
     },
     {
       url: '/rooms/night/room1/0V0A7613.JPG',
       alt: 'Family Room - Night',
-      caption: `${t('roomsFamily')} - Night interior 6`
+      caption: `${t('roomsFamily')} - Night`
     },
     {
       url: '/rooms/night/room1/0V0A7616.JPG',
       alt: 'Family Room - Night',
-      caption: `${t('roomsFamily')} - Night interior 7`
+      caption: `${t('roomsFamily')} - Night`
     },
     {
       url: '/rooms/night/room1/0V0A7619.JPG',
       alt: 'Family Room - Night',
-      caption: `${t('roomsFamily')} - Night interior 8`
+      caption: `${t('roomsFamily')} - Night`
     },
     {
       url: '/rooms/night/room1/0V0A7621.JPG',
       alt: 'Family Room - Night',
-      caption: `${t('roomsFamily')} - Night interior 9`
+      caption: `${t('roomsFamily')} - Night`
     },
     {
       url: '/rooms/night/room1/0V0A7623.JPG',
       alt: 'Family Room - Night',
-      caption: `${t('roomsFamily')} - Night interior 10`
+      caption: `${t('roomsFamily')} - Night`
     }
   ];
 
@@ -176,42 +176,102 @@ function Rooms() {
     {
       url: '/rooms/night/room2/double.JPG',
       alt: 'Double Room - Night',
-      caption: `${t('roomsDouble')} - Night view`
+      caption: `${t('roomsDouble')} - Night`
     },
     {
       url: '/rooms/night/room2/0V0A7625.JPG',
       alt: 'Double Room - Night',
-      caption: `${t('roomsDouble')} - Night interior 1`
+      caption: `${t('roomsDouble')} - Night`
     },
     {
       url: '/rooms/night/room2/0V0A7626.JPG',
       alt: 'Double Room - Night',
-      caption: `${t('roomsDouble')} - Night interior 2`
+      caption: `${t('roomsDouble')} - Night`
     },
     {
       url: '/rooms/night/room2/0V0A7627.JPG',
       alt: 'Double Room - Night',
-      caption: `${t('roomsDouble')} - Night interior 3`
+      caption: `${t('roomsDouble')} - Night`
     },
     {
       url: '/rooms/night/room2/0V0A7633.JPG',
       alt: 'Double Room - Night',
-      caption: `${t('roomsDouble')} - Night interior 4`
+      caption: `${t('roomsDouble')} - Night`
     },
     {
       url: '/rooms/night/room2/0V0A7637.JPG',
       alt: 'Double Room - Night',
-      caption: `${t('roomsDouble')} - Night interior 5`
+      caption: `${t('roomsDouble')} - Night`
     },
     {
       url: '/rooms/night/room2/0V0A7638.JPG',
       alt: 'Double Room - Night',
-      caption: `${t('roomsDouble')} - Night interior 6`
+      caption: `${t('roomsDouble')} - Night`
     }
   ];
 
+  // Day lobby photos (ლობი)
+  const dayLobbyImages = [
+    { url: '/gallery/day/lobby/ALXR_345-196.jpg', alt: 'Lobby', caption: 'Lobby' },
+    { url: '/gallery/day/lobby/ALXR_345-197.jpg', alt: 'Lobby', caption: 'Lobby' },
+    { url: '/gallery/day/lobby/ALXR_345-198.jpg', alt: 'Lobby', caption: 'Lobby' },
+    { url: '/gallery/day/lobby/ALXR_345-203.jpg', alt: 'Lobby', caption: 'Lobby' },
+    { url: '/gallery/day/lobby/ALXR_345-227.jpg', alt: 'Lobby', caption: 'Lobby' },
+    { url: '/gallery/day/lobby/ALXR_345-228.jpg', alt: 'Lobby', caption: 'Lobby' },
+    { url: '/gallery/day/lobby/ALXR_345-232.jpg', alt: 'Lobby', caption: 'Lobby' },
+    { url: '/gallery/day/lobby/DSC02883.jpg', alt: 'Lobby', caption: 'Lobby' }
+  ];
+
+  // Day other photos (ფოლი)
+  const dayOtherImages = [
+    { url: '/gallery/day/other/ALXR_345-195.jpg', alt: 'Hotel', caption: 'Hotel' },
+    { url: '/gallery/day/other/ALXR_345-199.jpg', alt: 'Hotel', caption: 'Hotel' }
+  ];
+
+  // Night facade photos
+  const nightFacadeImages = [
+    { url: '/gallery/night/facade/0V0A7653.JPG', alt: 'Facade - Night', caption: 'Facade - Night' },
+    { url: '/gallery/night/facade/0V0A7654.JPG', alt: 'Facade - Night', caption: 'Facade - Night' },
+    { url: '/gallery/night/facade/0V0A7655.JPG', alt: 'Facade - Night', caption: 'Facade - Night' },
+    { url: '/gallery/night/facade/0V0A7663.JPG', alt: 'Facade - Night', caption: 'Facade - Night' },
+    { url: '/gallery/night/facade/ALXR_345-205.jpg', alt: 'Facade - Night', caption: 'Facade - Night' }
+  ];
+
+  // Night hall photos
+  const nightHallImages = [
+    { url: '/gallery/night/hall/0V0A7578.JPG', alt: 'Hall - Night', caption: 'Hall - Night' },
+    { url: '/gallery/night/hall/0V0A7582.JPG', alt: 'Hall - Night', caption: 'Hall - Night' }
+  ];
+
+  // Night lobby photos
+  const nightLobbyImages = [
+    { url: '/gallery/night/lobby/0V0A7499.JPG', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/0V0A7511.JPG', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/0V0A7515.JPG', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/0V0A7522.JPG', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/0V0A7533.JPG', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/0V0A7539.JPG', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/0V0A7541.JPG', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/0V0A7543.JPG', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/0V0A7544.JPG', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/0V0A7556.JPG', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/0V0A7562.JPG', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/ALXR_345-188.jpg', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/ALXR_345-214.jpg', alt: 'Lobby - Night', caption: 'Lobby - Night' },
+    { url: '/gallery/night/lobby/ALXR_7789-114.png', alt: 'Lobby - Night', caption: 'Lobby - Night' }
+  ];
+
   // Combine all images for gallery
-  const allGalleryImages = [...allRoomImages, ...nightFamilyImages, ...nightDoubleImages];
+  const allGalleryImages = [
+    ...allRoomImages, 
+    ...nightFamilyImages, 
+    ...nightDoubleImages,
+    ...dayLobbyImages,
+    ...dayOtherImages,
+    ...nightFacadeImages,
+    ...nightHallImages,
+    ...nightLobbyImages
+  ];
 
   return (
     <div className="rooms">

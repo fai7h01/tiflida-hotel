@@ -29,7 +29,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 Tiflida Hotel. {t('footerRights')}</p>
+          <p>&copy; 2026 Tiflida Hotel. {t('footerRights')}</p>
         </div>
       </div>
     </footer>

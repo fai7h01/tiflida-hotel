@@ -62,15 +62,31 @@ function Carousel({ images, autoPlay = true, interval = 5000 }) {
       </div>
 
       {images.length > 1 && (
-        <div className="carousel-indicators">
-          {images.map((_, index) => (
-            <button
-              key={index}
-              className={`carousel-indicator ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+        <div className="carousel-controls">
+          {images.length <= 10 ? (
+            <div className="carousel-indicators">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  className={`carousel-indicator ${index === currentIndex ? 'active' : ''}`}
+                  onClick={() => goToSlide(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="carousel-progress-container">
+              <div className="carousel-progress-bar">
+                <div 
+                  className="carousel-progress-fill" 
+                  style={{ width: `${((currentIndex + 1) / images.length) * 100}%` }}
+                ></div>
+              </div>
+            </div>
+          )}
+          <div className="carousel-counter">
+            {currentIndex + 1} / {images.length}
+          </div>
         </div>
       )}
     </div>
