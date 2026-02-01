@@ -7,7 +7,7 @@ function Booking() {
   const handleBooking = (e) => {
     e.preventDefault();
     // In a real application, this would submit to a booking system
-    alert('Thank you for your interest! Our booking system will be available soon. Please contact us at info@tiflidahotel.com or call +1 (555) 123-4567 to make a reservation.');
+    alert('Thank you for your interest! Our booking system will be available soon. Please contact us at info@tiflida.ge or call +995 032 2 77 02 18 to make a reservation.');
   };
 
   return (
@@ -86,8 +86,8 @@ function Booking() {
             <div className="booking-info">
               <h3>{t('bookingNeedHelp')}</h3>
               <p>{t('bookingHelpText')}</p>
-              <p><strong>{t('contactPhone')}:</strong> +1 (555) 123-4567</p>
-              <p><strong>{t('contactEmail')}:</strong> reservations@tiflidahotel.com</p>
+              <p><strong>{t('contactPhone')}:</strong> +995 032 2 77 02 18</p>
+              <p><strong>{t('contactEmail')}:</strong> info@tiflida.ge</p>
               <p><strong>{t('bookingHours')}:</strong> {t('bookingHoursText')}</p>
             </div>
           </div>

@@ -87,17 +87,17 @@ function Contact() {
               
               <div className="info-item">
                 <h3>📍 {t('contactAddress')}</h3>
-                <p>123 Hotel Street<br />City, Country 12345</p>
+                <p>Ujarma II turn 1<br />Tbilisi, Georgia</p>
               </div>
 
               <div className="info-item">
                 <h3>📞 {t('contactPhone')}</h3>
-                <p>+1 (555) 123-4567</p>
+                <p>+995 032 2 77 02 18</p>
               </div>
 
               <div className="info-item">
                 <h3>✉️ {t('contactEmail')}</h3>
-                <p>info@tiflidahotel.com</p>
+                <p>info@tiflida.ge</p>
               </div>
 
               <div className="info-item">
@@ -181,15 +181,25 @@ function Contact() {
           <p className="map-description">{t('contactFindUsDesc')}</p>
           <div className="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132576678!2d-73.98811768459418!3d40.75889597932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+              src="https://www.google.com/maps?q=41.6851897,44.8369968&hl=en&z=14&output=embed"
               width="100%"
               height="450"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Hotel Location"
+              title="Tiflida Hotel Location"
             ></iframe>
+            <div style={{ marginTop: '1rem', textAlign: 'center' }}>
+              <a 
+                href="https://maps.app.goo.gl/B69jGWafFKntiyxCA?g_st=ic" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{ color: '#d4af37', textDecoration: 'none', fontWeight: '500' }}
+              >
+                {t('contactViewOnMaps') || 'View on Google Maps →'}
+              </a>
+            </div>
           </div>
         </div>
       </section>

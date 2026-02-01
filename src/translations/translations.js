@@ -58,23 +58,20 @@ const translations = {
     // Rooms Page
     roomsTitle: 'Our Rooms',
     roomsSubtitle: 'Choose from our selection of beautifully designed accommodations',
-    roomsDeluxe: 'Deluxe Room',
-    roomsDeluxeDesc: 'Spacious room with modern amenities, perfect for business or leisure travelers.',
-    roomsExecutive: 'Executive Suite',
-    roomsExecutiveDesc: 'Luxurious suite with separate living area, ideal for extended stays.',
-    roomsPresidential: 'Presidential Suite',
-    roomsPresidentialDesc: 'The ultimate in luxury with panoramic views and exclusive amenities.',
+    roomsDouble: 'Double Room',
+    roomsDoubleDesc: 'Comfortable double room with modern amenities, perfect for couples or solo travelers seeking comfort and style.',
+    roomsTwin: 'Twin Room',
+    roomsTwinDesc: 'Spacious twin room with two separate beds, ideal for friends or family members traveling together.',
     roomsFamily: 'Family Room',
-    roomsFamilyDesc: 'Perfect for families with children, featuring multiple beds and family-friendly amenities.',
+    roomsFamilyDesc: 'Perfect for families with children, featuring multiple beds and family-friendly amenities for a comfortable stay.',
     roomsGallery: 'Room Gallery',
     roomsGalleryDesc: 'Browse through our collection of beautiful room photos',
     roomsAmenities: 'Hotel Amenities',
     roomsBookNow: 'Book Now',
     roomsFeatures: {
-      deluxe: ['King-size bed', 'City view', 'Free WiFi', 'Mini bar', 'Work desk'],
-      executive: ['Separate bedroom', 'Living room', 'Kitchenette', 'Premium amenities', 'Concierge service'],
-      presidential: ['Master bedroom', 'Private balcony', 'Jacuzzi', 'Butler service', 'Premium bar'],
-      family: ['Two bedrooms', 'Family area', 'Gaming console', 'Kids amenities', 'Extra space']
+      double: ['Double bed', 'City view', 'Free WiFi', 'Mini bar', 'Work desk', 'Private bathroom'],
+      twin: ['Two single beds', 'City view', 'Free WiFi', 'Mini bar', 'Work desk', 'Private bathroom'],
+      family: ['Multiple beds', 'Family area', 'Extra space', 'Kids amenities', 'Free WiFi', 'Private bathroom']
     },
     
     // Contact Page
@@ -97,6 +94,7 @@ const translations = {
     contactErrorMessage: 'Failed to send message. Please try again later.',
     contactFindUs: 'Find Us',
     contactFindUsDesc: 'Visit us at our prime location in the heart of the city',
+    contactViewOnMaps: 'View on Google Maps',
     
     // Booking Page
     bookingTitle: 'Book Your Stay',
@@ -181,23 +179,20 @@ const translations = {
     // Rooms Page
     roomsTitle: 'ჩვენი ოთახები',
     roomsSubtitle: 'აირჩიეთ ჩვენი ლამაზად გაფორმებული საცხოვრებლებიდან',
-    roomsDeluxe: 'დელუქს ოთახი',
-    roomsDeluxeDesc: 'ფართო ოთახი თანამედროვე ზოგადი ნივთებით, იდეალური ბიზნეს ან დასვენების მოგზაურებისთვის.',
-    roomsExecutive: 'ექსეკუტივი სიუტი',
-    roomsExecutiveDesc: 'ფუფუნებით აღჭურვილი სიუტი ცალკე საიდუმლო ოთახით, იდეალური გახანგრძლივებული ყოფნისთვის.',
-    roomsPresidential: 'პრეზიდენტული სიუტი',
-    roomsPresidentialDesc: 'უმაღლესი ფუფუნება პანორამული ხედებითა და ექსკლუზიური ზოგადი ნივთებით.',
+    roomsDouble: 'ორმაგი ოთახი',
+    roomsDoubleDesc: 'კომფორტული ორმაგი ოთახი თანამედროვე ზოგადი ნივთებით, იდეალური წყვილებისთვის ან მარტო მოგზაურებისთვის.',
+    roomsTwin: 'ორი საწოლის ოთახი',
+    roomsTwinDesc: 'ფართო ოთახი ორი ცალკე საწოლით, იდეალური მეგობრებისთვის ან ოჯახის წევრებისთვის, რომლებიც ერთად მოგზაურობენ.',
     roomsFamily: 'ოჯახური ოთახი',
-    roomsFamilyDesc: 'იდეალური ოჯახებისთვის ბავშვებთან, რომელსაც აქვს რამდენიმე საწოლი და ოჯახური ზოგადი ნივთები.',
+    roomsFamilyDesc: 'იდეალური ოჯახებისთვის ბავშვებთან, რომელსაც აქვს რამდენიმე საწოლი და ოჯახური ზოგადი ნივთები კომფორტული ყოფნისთვის.',
     roomsGallery: 'ოთახების გალერეა',
     roomsGalleryDesc: 'გადახედეთ ჩვენი ლამაზი ოთახების ფოტოების კოლექციას',
     roomsAmenities: 'სასტუმროს ზოგადი ნივთები',
     roomsBookNow: 'დაჯავშნა',
     roomsFeatures: {
-      deluxe: ['სამეფო საწოლი', 'ქალაქის ხედი', 'უფასო WiFi', 'მინი ბარი', 'სამუშაო მაგიდა'],
-      executive: ['ცალკე საძინებელი', 'საიდუმლო ოთახი', 'სამზარეულო', 'პრემიუმ ზოგადი ნივთები', 'კონსიერჟის სერვისი'],
-      presidential: ['მთავარი საძინებელი', 'პირადი აივანი', 'ჯაკუზი', 'ბატლერის სერვისი', 'პრემიუმ ბარი'],
-      family: ['ორი საძინებელი', 'ოჯახური ზონა', 'გეიმინგ კონსოლი', 'ბავშვების ზოგადი ნივთები', 'დამატებითი სივრცე']
+      double: ['ორმაგი საწოლი', 'ქალაქის ხედი', 'უფასო WiFi', 'მინი ბარი', 'სამუშაო მაგიდა', 'პირადი აბაზანა'],
+      twin: ['ორი ერთჯერადი საწოლი', 'ქალაქის ხედი', 'უფასო WiFi', 'მინი ბარი', 'სამუშაო მაგიდა', 'პირადი აბაზანა'],
+      family: ['რამდენიმე საწოლი', 'ოჯახური ზონა', 'დამატებითი სივრცე', 'ბავშვებისთვის ზოგადი ნივთები', 'უფასო WiFi', 'პირადი აბაზანა']
     },
     
     // Contact Page
@@ -217,6 +212,7 @@ const translations = {
     contactSend: 'გაგზავნა',
     contactFindUs: 'იპოვეთ ჩვენ',
     contactFindUsDesc: 'ეწვიეთ ჩვენს პრივილეგირებულ მდებარეობას ქალაქის გულში',
+    contactViewOnMaps: 'ნახეთ Google Maps-ზე',
     
     // Booking Page
     bookingTitle: 'დაჯავშნეთ თქვენი ყოფნა',

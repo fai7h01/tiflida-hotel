@@ -14,10 +14,10 @@ function Footer() {
           </div>
           <div className="footer-section">
             <h3>{t('footerContact')}</h3>
-            <p>123 Hotel Street</p>
-            <p>City, Country 12345</p>
-            <p>{t('contactPhone')}: +1 (555) 123-4567</p>
-            <p>{t('contactEmail')}: info@tiflidahotel.com</p>
+            <p>Ujarma II turn 1</p>
+            <p>Tbilisi, Georgia</p>
+            <p>{t('contactPhone')}: +995 032 2 77 02 18</p>
+            <p>{t('contactEmail')}: info@tiflida.ge</p>
           </div>
           <div className="footer-section">
             <h3>{t('footerFollow')}</h3>
