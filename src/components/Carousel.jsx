@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import OptimizedImage from './OptimizedImage';
 import './Carousel.css';
 
 function Carousel({ images, autoPlay = true, interval = 5000 }) {
@@ -39,13 +40,11 @@ function Carousel({ images, autoPlay = true, interval = 5000 }) {
     if (imagesLengthRef.current > 1 && images) {
       const length = imagesLengthRef.current;
       
-      // Preload next 2 images
-      for (let i = 1; i <= 2; i++) {
-        const nextIndex = (currentIndex + i) % length;
-        if (images[nextIndex]?.url) {
-          const img = new Image();
-          img.src = images[nextIndex].url;
-        }
+      // Preload next image
+      const nextIndex = (currentIndex + 1) % length;
+      if (images[nextIndex]?.url) {
+        const img = new Image();
+        img.src = images[nextIndex].url;
       }
       
       // Preload previous image
@@ -102,7 +101,7 @@ function Carousel({ images, autoPlay = true, interval = 5000 }) {
         )}
         
         <div className="carousel-slide">
-          <img 
+          <OptimizedImage
             key={currentIndex}
             src={images[currentIndex]?.url || ''} 
             alt={images[currentIndex]?.alt || `Slide ${currentIndex + 1}`}
@@ -110,6 +109,8 @@ function Carousel({ images, autoPlay = true, interval = 5000 }) {
             loading="eager"
             decoding="async"
             fetchPriority="high"
+            sizes="(max-width: 768px) 100vw, 80vw"
+            widths={[480, 768, 1024, 1280, 1600]}
             onError={(e) => {
               console.error('Failed to load image:', images[currentIndex]?.url);
               e.target.style.display = 'none';

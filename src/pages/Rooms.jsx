@@ -1,5 +1,6 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import Carousel from '../components/Carousel';
+import OptimizedImage from '../components/OptimizedImage';
 import './Rooms.css';
 
 function Rooms() {
@@ -319,13 +320,15 @@ function Rooms() {
               <div key={index} className="room-card">
                 {room.images && room.images.length > 0 && (
                   <div className="room-image-container">
-                    <img 
+                    <OptimizedImage
                       src={room.images[0].url} 
                       alt={room.name}
                       className="room-card-image"
                       loading="lazy"
                       decoding="async"
                       fetchPriority="low"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      widths={[360, 540, 720, 960, 1200]}
                       onLoad={(e) => {
                         e.target.style.opacity = '1';
                       }}

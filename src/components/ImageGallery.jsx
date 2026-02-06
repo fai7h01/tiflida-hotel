@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import OptimizedImage from './OptimizedImage';
 import './ImageGallery.css';
 
 function ImageGallery({ images, columns = 3 }) {
@@ -26,6 +27,8 @@ function ImageGallery({ images, columns = 3 }) {
     setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  const gallerySizes = `(max-width: 768px) 100vw, (max-width: 968px) 50vw, ${Math.round(100 / columns)}vw`;
+
   return (
     <>
       <div className="image-gallery" style={{ '--columns': columns }}>
@@ -35,13 +38,15 @@ function ImageGallery({ images, columns = 3 }) {
             className="gallery-item"
             onClick={() => openModal(index)}
           >
-            <img
+            <OptimizedImage
               src={image.url}
               alt={image.alt || `Gallery image ${index + 1}`}
               className="gallery-image"
               loading="lazy"
               decoding="async"
-              fetchPriority={index < 6 ? "high" : "low"}
+              fetchPriority={index < 3 ? "high" : "low"}
+              sizes={gallerySizes}
+              widths={[360, 540, 720, 960, 1200]}
               onLoad={(e) => {
                 e.target.style.opacity = '1';
               }}
@@ -61,13 +66,15 @@ function ImageGallery({ images, columns = 3 }) {
             <button className="modal-nav modal-nav-prev" onClick={goToPrevious}>
               ‹
             </button>
-            <img
+            <OptimizedImage
               src={images[selectedImage].url}
               alt={images[selectedImage].alt || `Image ${selectedImage + 1}`}
               className="modal-image"
               loading="eager"
               decoding="async"
               fetchPriority="high"
+              sizes="90vw"
+              widths={[640, 960, 1280, 1600, 1920]}
               onLoad={(e) => {
                 e.target.style.opacity = '1';
               }}

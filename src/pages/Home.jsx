@@ -1,4 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext';
+import OptimizedImage from '../components/OptimizedImage';
 import './Home.css';
 
 function Home() {
@@ -54,12 +55,14 @@ function Home() {
             <div className="container">
               <div className="image-text-content">
                 <div className="image-text-image">
-                  <img 
+                  <OptimizedImage
                     src={section.image} 
                     alt={section.alt} 
                     loading="lazy"
                     decoding="async"
                     fetchPriority="low"
+                    sizes="(max-width: 968px) 100vw, 50vw"
+                    widths={[480, 768, 1024, 1280, 1600]}
                     onLoad={(e) => {
                       e.target.style.opacity = '1';
                     }}
